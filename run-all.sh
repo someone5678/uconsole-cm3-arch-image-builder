@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ./01-create-empty-image.sh
 ./02-create-partitions.sh
 ./10-load-format-mount-partitions.sh
@@ -12,3 +14,4 @@
 ./90-unmount-unload-partitions.sh
 ./95-compress-image-file.sh
 ./99-notice-after-installation.sh
+
