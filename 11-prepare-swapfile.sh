@@ -14,3 +14,5 @@ _SWAPFILE=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}/swapfile
 
 echo "Creating ${_SWAPFILE}, size ${SWAP_SIZE} MiB"
 dd if=/dev/zero of=${_SWAPFILE} bs=1M count=${SWAP_SIZE}
+
+mkswap ${_SWAPFILE}
