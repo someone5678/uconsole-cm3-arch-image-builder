@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./envs.sh
+
 echo "\
 A simple ArchLinux image is created. You might still need to
 setup timezone, locale, etc..
