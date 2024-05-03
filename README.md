@@ -12,7 +12,7 @@ No script needs user interaction. But be careful, scripts require superuser priv
 To install requirements on ArchLinux:
 
 ```bash
-pacman -Sy qemu-user-static qemu-user-static-binfmt arch-install-scripts
+pacman -Sy --needed qemu-user-static qemu-user-static-binfmt arch-install-scripts parted dosfstools e2fsprogs
 ```
 
 ## About default configuration
