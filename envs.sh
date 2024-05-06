@@ -52,10 +52,10 @@ PACSTRAP_EXTRA_PACKAGES=(
 
 # These are custom packages, located in pkgs
 CUSTOM_PACKAGES=(
-  # Wireless firmware, packaged
-	"ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
+	# Wireless firmware, packaged
+	"pkgs/ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
 	# kernel at end, so initramfs only generated once
-  "linux-uconsole-cm3-rpi64-6.6.28.r1.5a239c1adbaa-1-aarch64.pkg.tar.zst"
+	"pkgs/linux-uconsole-cm3-rpi64-6.6.28.r1.5a239c1adbaa-1-aarch64.pkg.tar.zst"
 )
 
 ######## don't change code below this line unless you understand the outcome ########
@@ -94,7 +94,7 @@ fi
 # commands for parted
 # using MBR to avoid tweaking hybrid MBR
 PARTITION_COMMANDS=(
-  "mklabel msdos"
+	"mklabel msdos"
 	"mkpart primary fat32 ${PART_PAD_SIZE}MiB $((PART_PAD_SIZE+BOOT_SIZE))MiB"
 	"set 1 boot on"
 	"mkpart primary ext4 $((PART_PAD_SIZE+BOOT_SIZE))MiB 100%"

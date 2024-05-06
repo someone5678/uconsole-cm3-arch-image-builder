@@ -4,10 +4,6 @@
 source ./envs.sh
 check_var_non_empty IMAGE_FILE
 
-# FIXME: kill processes in the chroot
-killall gpg-agent
-sleep 1
-
 # gather loop device information
 _DEV_INFO=$(losetup -j "${IMAGE_FILE}" | awk -F: '{ print $1 }' )
 

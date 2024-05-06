@@ -6,13 +6,12 @@ source ./envs.sh
 check_var_non_empty WORKING_DIR IMAGE_MOUNT_POINT
 
 _MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
+_PACSTRAP_EXTRA_PARAMS=()
 
-mkdir -p "${_MP}/pkgs"
+if [ -n "$PACSTRAP_PACMAN_CONFIG_FILE" ]; then
+    _PACSTRAP_EXTRA_PARAMS+="-C"
+    _PACSTRAP_EXTRA_PARAMS+="$PACSTRAP_PACMAN_CONFIG_FILE"
+fi
 
-for pkg in "${CUSTOM_PACKAGES[@]}"; do
-    cp "pkgs/$pkg" "${_MP}/pkgs/"
-    arch-chroot "${_MP}" pacman -U --noconfirm "/pkgs/$pkg"
-    rm "${_MP}/pkgs/$pkg"
-done
-
-rmdir "${_MP}/pkgs"
+# Oops, this can be done directly by pacstrap
+pacstrap -U "${_PACSTRAP_EXTRA_PARAMS[@]}" "${_MP}" "${CUSTOM_PACKAGES[@]}"
