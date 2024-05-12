@@ -43,7 +43,7 @@ deploy_tarball() {
 # This should be executed in a AArch64 chroot
 deploy_pacstrap() {
     # avoid using -K so no key is generated
-    pacstrap -GM "${_PACSTRAP_EXTRA_PARAMS[@]}" "${_MP}" base "${PACSTRAP_EXTRA_PACKAGES[@]}"
+    pacstrap -G -M "${_PACSTRAP_EXTRA_PARAMS[@]}" "${_MP}" base "${PACSTRAP_EXTRA_PACKAGES[@]}"
 }
 
 if [ -z "$ROOTFS_ARCHIVE" ]

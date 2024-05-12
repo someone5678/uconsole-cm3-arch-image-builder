@@ -14,4 +14,4 @@ if [ -n "$PACSTRAP_PACMAN_CONFIG_FILE" ]; then
 fi
 
 # Oops, this can be done directly by pacstrap
-pacstrap -U "${_PACSTRAP_EXTRA_PARAMS[@]}" "${_MP}" "${CUSTOM_PACKAGES[@]}"
+pacstrap -G -M "${_PACSTRAP_EXTRA_PARAMS[@]}" -U "${_MP}" "${CUSTOM_PACKAGES[@]}"
