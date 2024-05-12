@@ -55,7 +55,7 @@ CUSTOM_PACKAGES=(
 	# Wireless firmware, packaged
 	"pkgs/ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
 	# kernel at end, so initramfs only generated once
-	"pkgs/linux-uconsole-cm3-rpi64-6.6.28.r1.5a239c1adbaa-1-aarch64.pkg.tar.zst"
+	"pkgs/linux-uconsole-cm3-rpi64-6.6.30.r1.e0c78d59082a-1-aarch64.pkg.tar.zst"
 )
 
 ######## don't change code below this line unless you understand the outcome ########
