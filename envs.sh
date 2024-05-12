@@ -30,8 +30,8 @@ PACSTRAP_PACMAN_CONFIG_FILE=resources/arch-stage0-pacman.conf
 #PACSTRAP_PACMAN_CONFIG_FILE=resources/arch-stage0-cn-pacman.conf
 
 # first privileged user's name and password
-USER_NAME=ucon
-USER_PASSWD=ucon
+NEW_USER_NAME=ucon
+NEW_USER_PASSWORD=ucon
 
 # mountpoint
 IMAGE_MOUNT_POINT=mp
