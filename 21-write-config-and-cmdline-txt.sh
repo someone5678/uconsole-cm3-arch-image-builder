@@ -18,9 +18,9 @@ pwm_sample_bits=20
 gpio=10=ip,np
 
 # boot custom kernel
-kernel=Image.gz
+kernel=vmlinuz-linux-uconsole-rpi64
 arm_64bit=1
-initramfs initramfs-linux.img followkernel
+initramfs initramfs-linux-uconsole-rpi64.img followkernel
 
 dtoverlay=dwc2,dr_mode=host
 dtoverlay=audremap,pins_12_13

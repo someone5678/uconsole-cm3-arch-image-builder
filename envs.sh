@@ -44,7 +44,6 @@ PACSTRAP_EXTRA_PACKAGES=(
 	raspberrypi-bootloader
 	linux-firmware
 	wireless-regdb
-	mkinitcpio # install prior to kernel to avoid extra initramfs generation
 	networkmanager
 	vim
 	sudo
@@ -54,8 +53,8 @@ PACSTRAP_EXTRA_PACKAGES=(
 CUSTOM_PACKAGES=(
 	# Wireless firmware, packaged
 	"pkgs/ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
-	# kernel at end, so initramfs only generated once
-	"pkgs/linux-uconsole-cm3-rpi64-6.6.30.r1.e0c78d59082a-1-aarch64.pkg.tar.zst"
+	# linux kernel
+	"pkgs/linux-uconsole-rpi64-6.6.51+g0fb3c83a9fa3-1-aarch64.pkg.tar.zst"
 )
 
 ######## don't change code below this line unless you understand the outcome ########
