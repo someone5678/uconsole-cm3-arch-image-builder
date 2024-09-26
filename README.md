@@ -1,13 +1,13 @@
 # Image scripts
 
-Here is a set of scripts to create a archlinux image for uConsole(CM3) or whatever.
+Here is a set of scripts to create a archlinux image for uConsole(CM3/CM4/CM4S) or whatever.
 
 ## How to use the scripts
 
 `envs.sh` is the global config file. Edit the envs as you wish, and run the scripts in ascending order.
 Or, for convenience, run `run-all.sh` once.
 
-No script needs user interaction. But be careful, scripts require superuser privilege.
+No script needs user interaction. But be careful, **scripts require superuser privilege**.
 
 To install requirements on ArchLinux:
 
