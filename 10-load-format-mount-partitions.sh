@@ -13,12 +13,21 @@ _DEVICE=$(losetup -f -P --show "${IMAGE_FILE}")
 
 # format partitions
 mkfs.vfat -I -n BOOT ${_DEVICE}p1
-mkfs.ext4 -L ROOT ${_DEVICE}p2
+mkfs.btrfs -L ROOT ${_DEVICE}p2
 
 # mount partitions: boot(p1), root(p2)
 _MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
 
 mkdir -p ${_MP}
 mount ${_DEVICE}p2 ${_MP}
+CWD=$(pwd)
+cd ${_MP}
+btrfs subvolume create @
+btrfs subvolume create @cache
+btrfs subvolume create @log
+btrfs subvolume create @home
+cd $CWD
+_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}/@
+
 mkdir -p ${_MP}/boot
 mount ${_DEVICE}p1 ${_MP}/boot

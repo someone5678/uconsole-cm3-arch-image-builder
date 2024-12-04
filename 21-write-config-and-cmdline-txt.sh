@@ -5,7 +5,7 @@
 source ./envs.sh
 check_var_non_empty WORKING_DIR IMAGE_MOUNT_POINT
 
-_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
+_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}/@
 
 cat << EOF > "${_MP}/boot/config.txt"
 [all]
@@ -47,5 +47,5 @@ dtoverlay=uconsole,hwi2c
 EOF
 
 cat << EOF > "${_MP}/boot/cmdline.txt"
-root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait loglevel=3 cpufreq.default_governor=schedutil
+root=/dev/mmcblk0p2 rootflags=subvol=@ rootfstype=btrfs rw rootwait loglevel=3 cpufreq.default_governor=schedutil
 EOF

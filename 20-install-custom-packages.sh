@@ -5,7 +5,7 @@
 source ./envs.sh
 check_var_non_empty WORKING_DIR IMAGE_MOUNT_POINT
 
-_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
+_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}/@
 _PACSTRAP_EXTRA_PARAMS=()
 
 if [ -n "$PACSTRAP_PACMAN_CONFIG_FILE" ]; then

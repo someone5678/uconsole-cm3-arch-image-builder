@@ -3,7 +3,7 @@
 
 source ./envs.sh
 
-_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
+_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}/@
 _MP_ABS=$(readlink -f "${_MP}")  # further ensure absolute path
 
 configure_systemctl() {

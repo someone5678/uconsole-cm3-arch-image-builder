@@ -10,9 +10,12 @@ then
     exit 0
 fi
 
-_SWAPFILE=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}/swapfile
+_MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
+_SWAPFILE=@swap/swapfile
 
 echo "Creating ${_SWAPFILE}, size ${SWAP_SIZE} MiB"
-dd if=/dev/zero of=${_SWAPFILE} bs=1M count=${SWAP_SIZE}
-
-mkswap ${_SWAPFILE}
+CWD=${pwd}
+cd ${_MP}
+btrfs subvolume create @swap
+btrfs filesystem mkswapfile --size ${SWAP_SIZE}m --uuid clear ${_SWAPFILE}
+cd $CWD

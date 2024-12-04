@@ -349,5 +349,5 @@ PARTITION_COMMANDS=(
 	"mklabel msdos"
 	"mkpart primary fat32 ${PART_PAD_SIZE}MiB $((PART_PAD_SIZE+BOOT_SIZE))MiB"
 	"set 1 boot on"
-	"mkpart primary ext4 $((PART_PAD_SIZE+BOOT_SIZE))MiB 100%"
+	"mkpart primary btrfs $((PART_PAD_SIZE+BOOT_SIZE))MiB 100%"
 )
