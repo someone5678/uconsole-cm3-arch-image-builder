@@ -3,20 +3,20 @@
 # These are general configs
 
 # working directory
-WORKING_DIR="/workspace/image-build"
+WORKING_DIR="workspace/image-build"
 
 # image file name
 IMAGE_NAME="test-image.img"
 
 # full image size, in MiB
-IMAGE_SIZE=4096
+IMAGE_SIZE=16384
 
 # boot partition size, in MiB
-BOOT_SIZE=300
+BOOT_SIZE=1024
 
 # swapfile size, in MiB. swapfile is used so the partition can be flexible
 # swapfile location is hardcoded in corresponding script
-SWAP_SIZE=1024
+SWAP_SIZE=4096
 
 # RootFS tar ball, ommit to use pacstrap
 # or read from environment
@@ -30,8 +30,7 @@ PACSTRAP_PACMAN_CONFIG_FILE=resources/arch-stage0-pacman.conf
 #PACSTRAP_PACMAN_CONFIG_FILE=resources/arch-stage0-cn-pacman.conf
 
 # first privileged user's name and password
-NEW_USER_NAME=ucon
-NEW_USER_PASSWORD=ucon
+source ../cred.sh
 
 # mountpoint
 IMAGE_MOUNT_POINT=mp
@@ -39,14 +38,228 @@ IMAGE_MOUNT_POINT=mp
 # pacstrap extra packages
 # These are packages present in official archlinuxarm repository
 PACSTRAP_EXTRA_PACKAGES=(
+	## Base system
+	iptables-nft
 	base
+	base-devel
 	archlinuxarm-keyring
 	raspberrypi-bootloader
+	cryptsetup
+	device-mapper
 	linux-firmware
-	wireless-regdb
-	networkmanager
-	vim
 	sudo
+	diffutils
+	dracut
+	inetutils
+	less
+	logrotate
+	lsb-release
+	man-db
+	man-pages
+	mdadm
+	nano
+	nano-syntax-highlighting
+	perl
+	s-nail
+	sysfsutils
+	systemd-sysvcompat
+	texinfo
+	which
+	vi
+
+	## Filesystem
+	btrfs-progs
+	dosfstools
+	e2fsprogs
+	exfatprogs
+	f2fs-tools
+	jfsutils
+	lvm2
+	mtools
+	nfs-utils
+	nilfs-utils
+	ntfs-3g
+	reiserfsprogs
+	xfsprogs
+
+	## X system
+	mesa
+	mesa-utils
+	xf86-input-libinput
+	xf86-video-amdgpu
+	xorg-server
+	xorg-xdpyinfo
+	xorg-xinit
+	xorg-xinput
+	xorg-xkill
+	xorg-xrandr
+	
+	## Network hardware
+	b43-fwcutter
+
+	## General hardware
+	lsscsi
+	sg3_utils
+	smartmontools
+	usbutils
+
+	## Audio hardware
+	alsa-firmware
+	alsa-plugins
+	alsa-utils
+	gst-libav
+	gst-plugin-pipewire
+	gst-plugins-bad
+	gst-plugins-ugly
+	libdvdcss
+	pavucontrol
+	pipewire-alsa
+	pipewire-jack
+	pipewire-pulse
+	rtkit
+	sof-firmware
+	wireplumber
+
+	## General system
+	bash-completion
+	dmidecode
+	dialog
+	dmraid
+	duf
+	fakeroot
+	freetype2
+	git
+	glances
+	python-packaging
+	gpm
+	gptfdisk
+	haveged
+	hwdetect
+	inxi
+	libgsf
+	libopenraw
+	plocate
+	ntp
+	pacman-contrib
+	pkgfile
+	poppler-glib
+	power-profiles-daemon
+	rebuild-detector
+	rsync
+	tldr
+	unrar
+	unzip
+	wget
+	xdg-user-dirs
+	xdg-utils
+	xz
+
+	## Network
+	bind
+	dnsmasq
+	ethtool
+	iwd
+	modemmanager
+	nbd
+	ndisc6
+	net-tools
+	netctl
+	networkmanager
+	networkmanager-openconnect
+	networkmanager-openvpn
+	nss-mdns
+	openconnect
+	openvpn
+	ppp
+	pptpclient
+	rp-pppoe
+	usb_modeswitch
+	vpnc
+	whois
+	wireless-regdb
+	#wireless_tools
+	wpa_supplicant
+	xl2tpd
+
+	## Bluetooth
+	bluez
+	bluez-utils
+
+	## Firewall
+	ufw
+	python-pyqt5
+	python-capng
+
+	## Live iso tools
+	clonezilla
+	efitools
+	fsarchiver
+	gpart
+	gparted
+	grsync
+	partitionmanager
+	hdparm
+
+	## Fonts
+	cantarell-fonts
+	noto-fonts
+	noto-fonts-emoji
+	noto-fonts-cjk
+	noto-fonts-extra
+	ttf-bitstream-vera
+	ttf-dejavu
+	ttf-liberation
+	ttf-opensans
+
+	## Desktop environment
+	ark
+	bluedevil
+	breeze-gtk
+	dolphin
+	dolphin-plugins
+	ffmpegthumbs
+	fwupd
+	gwenview
+	haruna
+	kate
+	kcalc
+	kde-cli-tools
+	kde-gtk-config
+	kdeconnect
+	kdegraphics-thumbnailers
+	kdenetwork-filesharing
+	kdeplasma-addons
+	kgamma
+	kimageformats
+	kinfocenter
+	kio-admin
+	kio-extras
+	kio-fuse
+	konsole
+	kscreen
+	kwallet-pam
+	kwayland-integration
+	libappindicator-gtk3
+	maliit-keyboard
+	okular
+	plasma-browser-integration
+	plasma-desktop
+	plasma-disks
+	plasma-firewall
+	plasma-nm
+	plasma-pa
+	plasma-systemmonitor
+	plasma-workspace
+	powerdevil
+	print-manager
+	sddm-kcm
+	spectacle
+	xdg-desktop-portal-kde
+	xsettingsd
+	xwaylandvideobridge
+
+	## Browser
+	firefox
 )
 
 # These are custom packages, located in pkgs

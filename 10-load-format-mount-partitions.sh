@@ -13,7 +13,7 @@ _DEVICE=$(losetup -f -P --show "${IMAGE_FILE}")
 
 # format partitions
 mkfs.vfat -I -n BOOT ${_DEVICE}p1
-mkfs.ext4 -F -L ROOT ${_DEVICE}p2
+mkfs.ext4 -L ROOT ${_DEVICE}p2
 
 # mount partitions: boot(p1), root(p2)
 _MP=${WORKING_DIR%/}/${IMAGE_MOUNT_POINT%/}
