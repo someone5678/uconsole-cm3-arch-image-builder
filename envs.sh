@@ -268,6 +268,7 @@ CUSTOM_PACKAGES=(
 	"pkgs/ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
 	# linux kernel
 	"pkgs/linux-uconsole-rpi64-6.6.51+g0fb3c83a9fa3-1-aarch64.pkg.tar.zst"
+	"pkgs/rpi-dsi-workaround-0.1.1-1-any.pkg.tar.zst"
 )
 
 ######## don't change code below this line unless you understand the outcome ########
