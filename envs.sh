@@ -82,18 +82,6 @@ PACSTRAP_EXTRA_PACKAGES=(
 	reiserfsprogs
 	xfsprogs
 
-	## X system
-	mesa
-	mesa-utils
-	xf86-input-libinput
-	xf86-video-amdgpu
-	xorg-server
-	xorg-xdpyinfo
-	xorg-xinit
-	xorg-xinput
-	xorg-xkill
-	xorg-xrandr
-	
 	## Network hardware
 	b43-fwcutter
 
