@@ -43,216 +43,227 @@ IMAGE_MOUNT_POINT=mp
 # pacstrap extra packages
 # These are packages present in official archlinuxarm repository
 PACSTRAP_EXTRA_PACKAGES=(
-	## Base system
-	iptables-nft
+	# Default
 	base
-	base-devel
 	archlinuxarm-keyring
 	raspberrypi-bootloader
-	cryptsetup
-	device-mapper
 	linux-firmware
-	sudo
-	diffutils
-	dracut
-	inetutils
-	less
-	logrotate
-	lsb-release
-	man-db
-	man-pages
-	mdadm
-	nano
-	nano-syntax-highlighting
-	perl
-	s-nail
-	sysfsutils
-	systemd-sysvcompat
-	texinfo
-	which
-	vi
-
-	## Filesystem
-	btrfs-progs
-	dosfstools
-	e2fsprogs
-	exfatprogs
-	f2fs-tools
-	jfsutils
-	lvm2
-	mtools
-	nfs-utils
-	nilfs-utils
-	ntfs-3g
-	reiserfsprogs
-	xfsprogs
-
-	## Network hardware
-	b43-fwcutter
-
-	## General hardware
-	lsscsi
-	sg3_utils
-	smartmontools
-	usbutils
-
-	## Audio hardware
-	alsa-firmware
-	alsa-plugins
-	alsa-utils
-	gst-libav
-	gst-plugin-pipewire
-	gst-plugins-bad
-	gst-plugins-ugly
-	libdvdcss
-	pavucontrol
-	pipewire-alsa
-	pipewire-jack
-	pipewire-pulse
-	rtkit
-	sof-firmware
-	wireplumber
-
-	## General system
-	bash-completion
-	dmidecode
-	dialog
-	dmraid
-	duf
-	fakeroot
-	freetype2
-	git
-	glances
-	python-packaging
-	gpm
-	gptfdisk
-	haveged
-	hwdetect
-	inxi
-	libgsf
-	libopenraw
-	plocate
-	ntp
-	pacman-contrib
-	pkgfile
-	poppler-glib
-	power-profiles-daemon
-	rebuild-detector
-	rsync
-	tldr
-	unrar
-	unzip
-	wget
-	xdg-user-dirs
-	xdg-utils
-	xz
-
-	## Network
-	bind
-	dnsmasq
-	ethtool
-	iwd
-	modemmanager
-	nbd
-	ndisc6
-	net-tools
-	netctl
-	networkmanager
-	networkmanager-openconnect
-	networkmanager-openvpn
-	nss-mdns
-	openconnect
-	openvpn
-	ppp
-	pptpclient
-	rp-pppoe
-	usb_modeswitch
-	vpnc
-	whois
 	wireless-regdb
-	#wireless_tools
-	wpa_supplicant
-	xl2tpd
+	networkmanager
+	vi
+	nano
+	sudo
 
-	## Bluetooth
-	bluez
-	bluez-utils
+	# ## Base system
+	# iptables-nft
+	# base
+	# base-devel
+	# archlinuxarm-keyring
+	# raspberrypi-bootloader
+	# cryptsetup
+	# device-mapper
+	# linux-firmware
+	# sudo
+	# diffutils
+	# dracut
+	# inetutils
+	# less
+	# logrotate
+	# lsb-release
+	# man-db
+	# man-pages
+	# mdadm
+	# nano
+	# nano-syntax-highlighting
+	# perl
+	# s-nail
+	# sysfsutils
+	# systemd-sysvcompat
+	# texinfo
+	# which
+	# vi
 
-	## Firewall
-	ufw
-	python-pyqt5
-	python-capng
+	# ## Filesystem
+	# btrfs-progs
+	# dosfstools
+	# e2fsprogs
+	# exfatprogs
+	# f2fs-tools
+	# jfsutils
+	# lvm2
+	# mtools
+	# nfs-utils
+	# nilfs-utils
+	# ntfs-3g
+	# reiserfsprogs
+	# xfsprogs
 
-	## Live iso tools
-	clonezilla
-	efitools
-	fsarchiver
-	gpart
-	gparted
-	grsync
-	partitionmanager
-	hdparm
+	# ## Network hardware
+	# b43-fwcutter
 
-	## Fonts
-	cantarell-fonts
-	noto-fonts
-	noto-fonts-emoji
-	noto-fonts-cjk
-	noto-fonts-extra
-	ttf-bitstream-vera
-	ttf-dejavu
-	ttf-liberation
-	ttf-opensans
+	# ## General hardware
+	# lsscsi
+	# sg3_utils
+	# smartmontools
+	# usbutils
 
-	## Desktop environment
-	ark
-	bluedevil
-	breeze-gtk
-	dolphin
-	dolphin-plugins
-	ffmpegthumbs
-	fwupd
-	gwenview
-	haruna
-	kate
-	kcalc
-	kde-cli-tools
-	kde-gtk-config
-	kdeconnect
-	kdegraphics-thumbnailers
-	kdenetwork-filesharing
-	kdeplasma-addons
-	kgamma
-	kimageformats
-	kinfocenter
-	kio-admin
-	kio-extras
-	kio-fuse
-	konsole
-	kscreen
-	kwallet-pam
-	kwayland-integration
-	libappindicator-gtk3
-	maliit-keyboard
-	okular
-	plasma-browser-integration
-	plasma-desktop
-	plasma-disks
-	plasma-firewall
-	plasma-nm
-	plasma-pa
-	plasma-systemmonitor
-	plasma-workspace
-	powerdevil
-	print-manager
-	sddm-kcm
-	spectacle
-	xdg-desktop-portal-kde
-	xsettingsd
-	xwaylandvideobridge
+	# ## Audio hardware
+	# alsa-firmware
+	# alsa-plugins
+	# alsa-utils
+	# gst-libav
+	# gst-plugin-pipewire
+	# gst-plugins-bad
+	# gst-plugins-ugly
+	# libdvdcss
+	# pavucontrol
+	# pipewire-alsa
+	# pipewire-jack
+	# pipewire-pulse
+	# rtkit
+	# sof-firmware
+	# wireplumber
 
-	## Browser
-	firefox
+	# ## General system
+	# bash-completion
+	# dmidecode
+	# dialog
+	# dmraid
+	# duf
+	# fakeroot
+	# freetype2
+	# git
+	# glances
+	# python-packaging
+	# gpm
+	# gptfdisk
+	# haveged
+	# hwdetect
+	# inxi
+	# libgsf
+	# libopenraw
+	# plocate
+	# ntp
+	# pacman-contrib
+	# pkgfile
+	# poppler-glib
+	# power-profiles-daemon
+	# rebuild-detector
+	# rsync
+	# tldr
+	# unrar
+	# unzip
+	# wget
+	# xdg-user-dirs
+	# xdg-utils
+	# xz
+
+	# ## Network
+	# bind
+	# dnsmasq
+	# ethtool
+	# iwd
+	# modemmanager
+	# nbd
+	# ndisc6
+	# net-tools
+	# netctl
+	# networkmanager
+	# networkmanager-openconnect
+	# networkmanager-openvpn
+	# nss-mdns
+	# openconnect
+	# openvpn
+	# ppp
+	# pptpclient
+	# rp-pppoe
+	# usb_modeswitch
+	# vpnc
+	# whois
+	# wireless-regdb
+	# #wireless_tools
+	# wpa_supplicant
+	# xl2tpd
+
+	# ## Bluetooth
+	# bluez
+	# bluez-utils
+
+	# ## Firewall
+	# ufw
+	# python-pyqt5
+	# python-capng
+
+	# ## Live iso tools
+	# clonezilla
+	# efitools
+	# fsarchiver
+	# gpart
+	# gparted
+	# grsync
+	# partitionmanager
+	# hdparm
+
+	# ## Fonts
+	# cantarell-fonts
+	# noto-fonts
+	# noto-fonts-emoji
+	# noto-fonts-cjk
+	# noto-fonts-extra
+	# ttf-bitstream-vera
+	# ttf-dejavu
+	# ttf-liberation
+	# ttf-opensans
+
+	# ## Desktop environment
+	# ark
+	# bluedevil
+	# breeze-gtk
+	# dolphin
+	# dolphin-plugins
+	# ffmpegthumbs
+	# fwupd
+	# gwenview
+	# haruna
+	# kate
+	# kcalc
+	# kde-cli-tools
+	# kde-gtk-config
+	# kdeconnect
+	# kdegraphics-thumbnailers
+	# kdenetwork-filesharing
+	# kdeplasma-addons
+	# kgamma
+	# kimageformats
+	# kinfocenter
+	# kio-admin
+	# kio-extras
+	# kio-fuse
+	# konsole
+	# kscreen
+	# kwallet-pam
+	# kwayland-integration
+	# libappindicator-gtk3
+	# maliit-keyboard
+	# okular
+	# plasma-browser-integration
+	# plasma-desktop
+	# plasma-disks
+	# plasma-firewall
+	# plasma-nm
+	# plasma-pa
+	# plasma-systemmonitor
+	# plasma-workspace
+	# powerdevil
+	# print-manager
+	# sddm-kcm
+	# spectacle
+	# xdg-desktop-portal-kde
+	# xsettingsd
+	# xwaylandvideobridge
+
+	# ## Browser
+	# firefox
 )
 
 # These are custom packages, located in pkgs
@@ -261,7 +272,6 @@ CUSTOM_PACKAGES=(
 	"pkgs/ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
 	# linux kernel
 	"pkgs/linux-uconsole-rpi64-6.6.51+g0fb3c83a9fa3-1-aarch64.pkg.tar.zst"
-	"pkgs/rpi-dsi-workaround-0.1.1-1-any.pkg.tar.zst"
 )
 
 ######## don't change code below this line unless you understand the outcome ########
