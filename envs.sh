@@ -30,7 +30,12 @@ PACSTRAP_PACMAN_CONFIG_FILE=resources/arch-stage0-pacman.conf
 #PACSTRAP_PACMAN_CONFIG_FILE=resources/arch-stage0-cn-pacman.conf
 
 # first privileged user's name and password
-source ../cred.sh
+if [ -f "../cred.sh" ]; then
+	source ../cred.sh
+else
+	NEW_USER_NAME=ucon
+	NEW_USER_PASSWORD=ucon
+fi
 
 # mountpoint
 IMAGE_MOUNT_POINT=mp
