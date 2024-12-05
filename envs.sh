@@ -206,6 +206,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 	#wireless_tools
 	wpa_supplicant
 	xl2tpd
+	vulkan-broadcom
 
 	## Bluetooth
 	bluez
