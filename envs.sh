@@ -44,44 +44,44 @@ IMAGE_MOUNT_POINT=mp
 # These are packages present in official archlinuxarm repository
 PACSTRAP_EXTRA_PACKAGES=(
 	# Default
-	base
-	archlinuxarm-keyring
-	raspberrypi-bootloader
-	linux-firmware
-	wireless-regdb
-	networkmanager
-	vi
-	nano
-	sudo
-
-	# ## Base system
-	# iptables-nft
 	# base
-	# base-devel
 	# archlinuxarm-keyring
 	# raspberrypi-bootloader
-	# cryptsetup
-	# device-mapper
 	# linux-firmware
-	# sudo
-	# diffutils
-	# dracut
-	# inetutils
-	# less
-	# logrotate
-	# lsb-release
-	# man-db
-	# man-pages
-	# mdadm
-	# nano
-	# nano-syntax-highlighting
-	# perl
-	# s-nail
-	# sysfsutils
-	# systemd-sysvcompat
-	# texinfo
-	# which
+	# wireless-regdb
+	# networkmanager
 	# vi
+	# nano
+	# sudo
+
+	# ## Base system
+	iptables-nft
+	base
+	base-devel
+	archlinuxarm-keyring
+	raspberrypi-bootloader
+	cryptsetup
+	device-mapper
+	linux-firmware
+	sudo
+	diffutils
+	dracut
+	inetutils
+	less
+	logrotate
+	lsb-release
+	man-db
+	man-pages
+	mdadm
+	nano
+	nano-syntax-highlighting
+	perl
+	s-nail
+	sysfsutils
+	systemd-sysvcompat
+	texinfo
+	which
+	vi
 
 	# ## Filesystem
 	# btrfs-progs
@@ -168,7 +168,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 	# ndisc6
 	# net-tools
 	# netctl
-	# networkmanager
+	networkmanager
 	# networkmanager-openconnect
 	# networkmanager-openvpn
 	# nss-mdns
@@ -180,7 +180,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 	# usb_modeswitch
 	# vpnc
 	# whois
-	# wireless-regdb
+	wireless-regdb
 	# #wireless_tools
 	# wpa_supplicant
 	# xl2tpd

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ "$EUID" != 0 ]]; then
+    CWD=$(pwd)
+    exec sudo -s "${CWD}/run-all.sh" "$@"
+    unset $CWD
+fi
+
 set -e
 
 ./01-create-empty-image.sh
@@ -15,3 +21,4 @@ set -e
 ./95-compress-image-file.sh
 ./99-notice-after-installation.sh
 
+sudo -k
