@@ -14,7 +14,7 @@ do
     # unmount partitions, order matters
     for part in 1 2
     do
-        umount "${_DEVICE}p$part"
+        umount -l "${_DEVICE}p$part"
     done
 
     # free loop device
