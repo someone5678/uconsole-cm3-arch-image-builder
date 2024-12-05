@@ -60,6 +60,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 	base-devel
 	archlinuxarm-keyring
 	raspberrypi-bootloader
+	raspberrypi-utils
 	cryptsetup
 	device-mapper
 	linux-firmware
