@@ -1,6 +1,9 @@
 #!/bin/bash
 # This script simply create an empty image file to write
 
+# Clean-up workspace
+rm -Rf workspace
+
 source ./envs.sh
 check_var_non_empty IMAGE_FILE IMAGE_SIZE
 
