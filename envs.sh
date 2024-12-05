@@ -63,9 +63,10 @@ PACSTRAP_EXTRA_PACKAGES=(
 	cryptsetup
 	device-mapper
 	linux-firmware
+	firmware-raspberrypi
 	sudo
 	diffutils
-	# dracut # maybe cause kernelpanic
+	# dracut # cause kernelpanic
 	inetutils
 	less
 	logrotate
