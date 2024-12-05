@@ -8,7 +8,7 @@ _MP_ABS=$(readlink -f "${_MP}")  # further ensure absolute path
 
 NEW_USER_NAME=${NEW_USER_NAME:-ucon}
 NEW_USER_PASSWORD=${NEW_USER_PASSWORD:-ucon}
-NEW_USER_GROUPS=(adm wheel)
+NEW_USER_GROUPS=(adm wheel rfkill plugdev realtime)
 
 create_user() {
     useradd --root "$_MP_ABS" -m "${NEW_USER_NAME}"

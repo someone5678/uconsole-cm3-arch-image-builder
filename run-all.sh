@@ -17,6 +17,7 @@ set -e
 ./20-write-fstab.sh
 ./21-write-config-and-cmdline-txt.sh
 ./25-create-user.sh
+./26-setup-systemctl.sh
 ./90-unmount-unload-partitions.sh
 ./95-compress-image-file.sh
 ./99-notice-after-installation.sh

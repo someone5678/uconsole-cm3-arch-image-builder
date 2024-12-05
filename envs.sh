@@ -54,7 +54,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 	# nano
 	# sudo
 
-	# ## Base system
+	## Base system
 	iptables-nft
 	base
 	base-devel
@@ -65,7 +65,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 	linux-firmware
 	sudo
 	diffutils
-	dracut
+	# dracut # maybe cause kernelpanic
 	inetutils
 	less
 	logrotate
@@ -83,187 +83,220 @@ PACSTRAP_EXTRA_PACKAGES=(
 	which
 	vi
 
-	# ## Filesystem
-	# btrfs-progs
-	# dosfstools
-	# e2fsprogs
-	# exfatprogs
-	# f2fs-tools
-	# jfsutils
-	# lvm2
-	# mtools
-	# nfs-utils
-	# nilfs-utils
-	# ntfs-3g
-	# reiserfsprogs
-	# xfsprogs
+	## Filesystem
+	btrfs-progs
+	dosfstools
+	e2fsprogs
+	exfatprogs
+	f2fs-tools
+	jfsutils
+	lvm2
+	mtools
+	nfs-utils
+	nilfs-utils
+	ntfs-3g
+	reiserfsprogs
+	xfsprogs
 
-	# ## Network hardware
-	# b43-fwcutter
+	## Boot
+	efibootmgr
+	efitools
 
-	# ## General hardware
-	# lsscsi
-	# sg3_utils
-	# smartmontools
-	# usbutils
+	# HARDWARE
 
-	# ## Audio hardware
-	# alsa-firmware
-	# alsa-plugins
-	# alsa-utils
-	# gst-libav
-	# gst-plugin-pipewire
-	# gst-plugins-bad
-	# gst-plugins-ugly
-	# libdvdcss
-	# pavucontrol
-	# pipewire-alsa
-	# pipewire-jack
-	# pipewire-pulse
-	# rtkit
-	# sof-firmware
-	# wireplumber
+	## X system
+	mesa
+	mesa-utils
+	xf86-input-libinput
+	xf86-video-amdgpu
+	xorg-server
+	xorg-xdpyinfo
+	xorg-xinit
+	xorg-xinput
+	xorg-xkill
+	xorg-xrandr
 
-	# ## General system
-	# bash-completion
-	# dmidecode
-	# dialog
-	# dmraid
-	# duf
-	# fakeroot
-	# freetype2
-	# git
-	# glances
-	# python-packaging
-	# gpm
-	# gptfdisk
-	# haveged
-	# hwdetect
-	# inxi
-	# libgsf
-	# libopenraw
-	# plocate
-	# ntp
-	# pacman-contrib
-	# pkgfile
-	# poppler-glib
-	# power-profiles-daemon
-	# rebuild-detector
-	# rsync
-	# tldr
-	# unrar
-	# unzip
-	# wget
-	# xdg-user-dirs
-	# xdg-utils
-	# xz
+	## Network hardware
+	b43-fwcutter
+
+	## General hardware
+	lsscsi
+	sg3_utils
+	smartmontools
+	usbutils
+
+	## Audio hardware
+	alsa-firmware
+	alsa-plugins
+	alsa-utils
+	gst-libav
+	gst-plugin-pipewire
+	gst-plugins-bad
+	gst-plugins-ugly
+	libdvdcss
+	pavucontrol
+	pipewire-alsa
+	pipewire-jack
+	pipewire-pulse
+	rtkit
+	sof-firmware
+	wireplumber
+
+	# SOFTWARE
+
+	## General system
+	bash-completion
+	dmidecode
+	dialog
+	dmraid
+	duf
+	fakeroot
+	freetype2
+	git
+	glances
+	python-packaging
+	gpm
+	gptfdisk
+	haveged
+	hwdetect
+	inxi
+	libgsf
+	libopenraw
+	plocate
+	ntp
+	pacman-contrib
+	pkgfile
+	poppler-glib
+	power-profiles-daemon
+	rebuild-detector
+	rsync
+	tldr
+	unrar
+	unzip
+	wget
+	xdg-user-dirs
+	xdg-utils
+	xz
 
 	# ## Network
-	# bind
-	# dnsmasq
-	# ethtool
-	# iwd
-	# modemmanager
-	# nbd
-	# ndisc6
-	# net-tools
-	# netctl
+	bind
+	dnsmasq
+	ethtool
+	iwd
+	modemmanager
+	nbd
+	ndisc6
+	net-tools
+	netctl
 	networkmanager
-	# networkmanager-openconnect
-	# networkmanager-openvpn
-	# nss-mdns
-	# openconnect
-	# openvpn
-	# ppp
-	# pptpclient
-	# rp-pppoe
-	# usb_modeswitch
-	# vpnc
-	# whois
+	networkmanager-openconnect
+	networkmanager-openvpn
+	nss-mdns
+	openconnect
+	openvpn
+	ppp
+	pptpclient
+	rp-pppoe
+	usb_modeswitch
+	vpnc
+	whois
 	wireless-regdb
-	# #wireless_tools
-	# wpa_supplicant
-	# xl2tpd
+	#wireless_tools
+	wpa_supplicant
+	xl2tpd
 
-	# ## Bluetooth
-	# bluez
-	# bluez-utils
+	## Bluetooth
+	bluez
+	bluez-utils
 
-	# ## Firewall
-	# ufw
-	# python-pyqt5
-	# python-capng
+	## Firewall
+	ufw
+	python-pyqt5
+	python-capng
 
-	# ## Live iso tools
-	# clonezilla
-	# efitools
-	# fsarchiver
-	# gpart
-	# gparted
-	# grsync
-	# partitionmanager
-	# hdparm
+	## Live iso tools
+	clonezilla
+	efitools
+	fsarchiver
+	gpart
+	gparted
+	grsync
+	partitionmanager
+	hdparm
 
-	# ## Fonts
-	# cantarell-fonts
-	# noto-fonts
-	# noto-fonts-emoji
-	# noto-fonts-cjk
-	# noto-fonts-extra
-	# ttf-bitstream-vera
-	# ttf-dejavu
-	# ttf-liberation
-	# ttf-opensans
+	## Fonts
+	cantarell-fonts
+	noto-fonts
+	noto-fonts-emoji
+	noto-fonts-cjk
+	noto-fonts-extra
+	ttf-bitstream-vera
+	ttf-dejavu
+	ttf-liberation
+	ttf-opensans
 
-	# ## Desktop environment
-	# ark
-	# bluedevil
-	# breeze-gtk
-	# dolphin
-	# dolphin-plugins
-	# ffmpegthumbs
-	# fwupd
-	# gwenview
-	# haruna
-	# kate
-	# kcalc
-	# kde-cli-tools
-	# kde-gtk-config
-	# kdeconnect
-	# kdegraphics-thumbnailers
-	# kdenetwork-filesharing
-	# kdeplasma-addons
-	# kgamma
-	# kimageformats
-	# kinfocenter
-	# kio-admin
-	# kio-extras
-	# kio-fuse
-	# konsole
-	# kscreen
-	# kwallet-pam
-	# kwayland-integration
-	# libappindicator-gtk3
-	# maliit-keyboard
-	# okular
-	# plasma-browser-integration
-	# plasma-desktop
-	# plasma-disks
-	# plasma-firewall
-	# plasma-nm
-	# plasma-pa
-	# plasma-systemmonitor
-	# plasma-workspace
-	# powerdevil
-	# print-manager
-	# sddm-kcm
-	# spectacle
-	# xdg-desktop-portal-kde
-	# xsettingsd
-	# xwaylandvideobridge
+	# DESKTOP
 
-	# ## Browser
-	# firefox
+	## Desktop environment
+	ark
+	bluedevil
+	breeze-gtk
+	dolphin
+	dolphin-plugins
+	ffmpegthumbs
+	fwupd
+	gwenview
+	haruna
+	kate
+	kcalc
+	kde-cli-tools
+	kde-gtk-config
+	kdeconnect
+	kdegraphics-thumbnailers
+	kdenetwork-filesharing
+	kdeplasma-addons
+	kgamma
+	kimageformats
+	kinfocenter
+	kio-admin
+	kio-extras
+	kio-fuse
+	konsole
+	kscreen
+	kwallet-pam
+	kwayland-integration
+	libappindicator-gtk3
+	maliit-keyboard
+	okular
+	plasma-browser-integration
+	plasma-desktop
+	plasma-disks
+	plasma-firewall
+	plasma-nm
+	plasma-pa
+	plasma-systemmonitor
+	plasma-workspace
+	powerdevil
+	print-manager
+	sddm-kcm
+	spectacle
+	xdg-desktop-portal-kde
+	xsettingsd
+	xwaylandvideobridge
+
+	## Browser
+	firefox
+
+	## System
+	meld
+
+	# VM SUPPORT
+	
+	## Qemu
+	qemu-guest-agent
+	
+	## Spice
+	spice-vdagent
 )
 
 # These are custom packages, located in pkgs
