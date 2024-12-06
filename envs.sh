@@ -252,6 +252,8 @@ PACSTRAP_EXTRA_PACKAGES=(
 	haruna
 	kate
 	kcalc
+	discover
+	flatpak
 	kde-cli-tools
 	kde-gtk-config
 	kdeconnect
