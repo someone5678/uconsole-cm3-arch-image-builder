@@ -36,3 +36,5 @@ fi
 # create a new privileged user
 create_user
 configure_sudo
+
+mv "${_MP}/home/*" "${_MP}/../@home/"
