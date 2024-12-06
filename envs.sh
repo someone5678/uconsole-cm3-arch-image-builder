@@ -305,7 +305,7 @@ PACSTRAP_EXTRA_PACKAGES=(
 # These are custom packages, located in pkgs
 CUSTOM_PACKAGES=(
 	# Wireless firmware, packaged
-	"pkgs/brcmfmac43456-firmware-20190114-1-any.pkg.tar.zst"
+	"pkgs/ap6256-firmware-0.1.20231120-1-any.pkg.tar.zst"
 	# linux kernel
 	"pkgs/linux-uconsole-rpi64-6.6.51+g0fb3c83a9fa3-1-aarch64.pkg.tar.zst"
 )
